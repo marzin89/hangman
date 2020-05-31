@@ -1,1 +1,1 @@
-# hangman
+A classic hangman game, starting with an array of ten letter words. I might add new words to the array later on.# hangman
