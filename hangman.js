@@ -1,4 +1,4 @@
-let words = ['javascript'];
+let words = ['javascript', 'strawberry', 'television', 'university', 'friendship'];
 
 function drawLetterLines() {
 
