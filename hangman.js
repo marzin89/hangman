@@ -1,6 +1,6 @@
 let words = ['javascript', 'strawberry', 'television', 'university', 'friendship'];
 
-let word = words[4];
+let word = words[0];
 
 function drawLetterLines() {
 
@@ -69,6 +69,8 @@ function drawAlphabet() {
 
     a.className='alphabet';
 
+    a.id='A';
+
     a_to_m.appendChild(a);
 
     a.onclick=drawA;
@@ -79,6 +81,8 @@ function drawAlphabet() {
     b.innerText='B';
 
     b.className='alphabet';
+
+    b.id='B';
 
     a_to_m.appendChild(b);
 
@@ -91,6 +95,8 @@ function drawAlphabet() {
 
     c.className='alphabet';
 
+    c.id='C';
+
     a_to_m.appendChild(c);
 
     c.onclick=drawC;
@@ -101,6 +107,8 @@ function drawAlphabet() {
     d.innerText='D';
 
     d.className='alphabet';
+
+    d.id='D';
 
     a_to_m.appendChild(d);
 
@@ -113,6 +121,8 @@ function drawAlphabet() {
 
     e.className='alphabet';
 
+    e.id='E';
+
     a_to_m.appendChild(e);
     
     e.onclick=drawE;
@@ -123,6 +133,8 @@ function drawAlphabet() {
     f.innerText='F';
 
     f.className='alphabet';
+
+    f.id='F';
 
     a_to_m.appendChild(f);
 
@@ -135,6 +147,8 @@ function drawAlphabet() {
 
     g.className='alphabet';
 
+    g.id='G';
+
     a_to_m.appendChild(g);
 
 
@@ -143,6 +157,8 @@ function drawAlphabet() {
     h.innerText='H';
 
     h.className='alphabet';
+
+    h.id='H';
 
     a_to_m.appendChild(h);
 
@@ -155,6 +171,8 @@ function drawAlphabet() {
 
     i.className='alphabet';
 
+    i.id='I';
+
     a_to_m.appendChild(i);
 
     i.onclick=drawI;
@@ -166,6 +184,8 @@ function drawAlphabet() {
 
     j.className='alphabet';
 
+    j.id='J';
+
     a_to_m.appendChild(j);
 
     j.onclick=drawJ;
@@ -174,6 +194,8 @@ function drawAlphabet() {
     const k = document.createElement('button');
 
     k.innerText='K';
+
+    k.id='K';
 
     k.className='alphabet';
 
@@ -186,6 +208,8 @@ function drawAlphabet() {
 
     l.className='alphabet';
 
+    l.id='L';
+
     a_to_m.appendChild(l);
 
     l.onclick=drawL;
@@ -197,8 +221,11 @@ function drawAlphabet() {
 
     m.className='alphabet';
 
+    m.id='M';
+
     a_to_m.appendChild(m);
 
+    
     const n_to_z = document.createElement('div');
 
     n_to_z.id='N-Z';
@@ -212,6 +239,8 @@ function drawAlphabet() {
 
     n.className='alphabet';
 
+    n.id='N';
+
     n_to_z.appendChild(n);
 
     n.onclick=drawN;
@@ -222,6 +251,8 @@ function drawAlphabet() {
     o.innerText='O';
 
     o.className='alphabet';
+
+    o.id='O';
 
     n_to_z.appendChild(o);
 
@@ -234,6 +265,8 @@ function drawAlphabet() {
 
     p.className='alphabet';
 
+    p.id='P';
+
     n_to_z.appendChild(p);
 
     p.onclick=drawP;
@@ -245,6 +278,8 @@ function drawAlphabet() {
 
     q.className='alphabet';
 
+    q.id='Q';
+
     n_to_z.appendChild(q);
 
 
@@ -253,6 +288,8 @@ function drawAlphabet() {
     r.innerText='R';
 
     r.className='alphabet';
+
+    r.id='R';
 
     n_to_z.appendChild(r);
 
@@ -265,6 +302,8 @@ function drawAlphabet() {
 
     s.className='alphabet';
 
+    s.id='S';
+
     n_to_z.appendChild(s);
 
     s.onclick=drawS;
@@ -275,6 +314,8 @@ function drawAlphabet() {
     t.innerText='T';
 
     t.className='alphabet';
+
+    t.id='T';
 
     n_to_z.appendChild(t);
 
@@ -287,6 +328,8 @@ function drawAlphabet() {
 
     u.className='alphabet';
 
+    u.id='U';
+
     n_to_z.appendChild(u);
 
     u.onclick=drawU;
@@ -297,6 +340,8 @@ function drawAlphabet() {
     v.innerText='V';
 
     v.className='alphabet';
+
+    v.id='V';
 
     n_to_z.appendChild(v);
 
@@ -309,6 +354,8 @@ function drawAlphabet() {
 
     w.className='alphabet';
 
+    w.id='W';
+
     n_to_z.appendChild(w);
 
     w.onclick=drawW;
@@ -320,6 +367,8 @@ function drawAlphabet() {
 
     x.className='alphabet';
 
+    x.id='X';
+
     n_to_z.appendChild(x);
 
 
@@ -328,6 +377,8 @@ function drawAlphabet() {
     y.innerText='Y';
 
     y.className='alphabet';
+
+    y.id='Y';
 
     n_to_z.appendChild(y);
 
@@ -339,6 +390,8 @@ function drawAlphabet() {
     z.innerText='Z';
 
     z.className='alphabet';
+
+    z.id='Z';
 
     n_to_z.appendChild(z);
 
@@ -768,4 +821,294 @@ function drawY() {
 
     }
 
+}
+
+let answer = 0;
+
+let hangman = 0;
+
+function drawHill1() {
+        
+    let hill1 = document.getElementById('hangman-area');
+
+    let ctx = hill1.getContext('2d');
+
+    ctx.moveTo(50, 500);
+
+    ctx.lineTo(150, 400);
+
+    ctx.stroke();
+
+}
+
+function drawHill2() {
+
+    let hill2 = document.getElementById('hangman-area');
+
+    let ctx = hill2.getContext('2d');
+
+    ctx.moveTo(150, 400);
+
+    ctx.lineTo(250, 500);
+
+    ctx.stroke();
+
+}    
+
+function drawPole() {
+
+    let pole = document.getElementById('hangman-area');
+
+    let ctx = pole.getContext('2d');
+
+    ctx.moveTo(150, 400);
+
+    ctx.lineTo(150, 50);
+
+    ctx.stroke();
+
+}
+
+function drawDiagonalBeam() {
+
+    let diagonalBeam = document.getElementById('hangman-area');
+
+    let ctx = diagonalBeam.getContext('2d');
+
+    ctx.moveTo(150, 125);
+
+    ctx.lineTo(225, 50);
+
+    ctx.stroke();
+
+}
+
+function drawHorizontalBeam() {
+
+    let horizontalBeam = document.getElementById('hangman-area');
+
+    let ctx = horizontalBeam.getContext('2d');
+
+    ctx.moveTo(150, 50);
+
+    ctx.lineTo(400, 50);
+
+    ctx.stroke();
+
+}
+
+function drawRope() {
+
+    let rope = document.getElementById('hangman-area');
+
+    let ctx = rope.getContext('2d');
+
+    ctx.moveTo(400, 50);
+
+    ctx.lineTo(400, 100);
+
+    ctx.stroke();
+
+}
+
+function drawHead() {
+
+    let head = document.getElementById('hangman-area');
+
+    let ctx = head.getContext('2d');
+
+    ctx.arc(400, 140, 40, 0, 2 * Math.PI);
+
+    ctx.stroke();
+
+}
+
+function drawTorso() {
+
+    let torso = document.getElementById('hangman-area');
+
+    let ctx = torso.getContext('2d');
+
+    ctx.moveTo(400, 180);
+
+    ctx.lineTo(400, 325);
+
+    ctx.stroke();
+
+}
+
+function drawLeftArm() {
+
+    let leftArm = document.getElementById('hangman-area');
+
+    let ctx = leftArm.getContext('2d');
+
+    ctx.moveTo(400, 190);
+
+    ctx.lineTo(340, 250);
+
+    ctx.stroke();
+
+}
+
+function drawRightArm() {
+
+    let rightArm = document.getElementById('hangman-area');
+
+    let ctx = rightArm.getContext('2d');
+
+    ctx.moveTo(400, 190);
+
+    ctx.lineTo(460, 250);
+
+    ctx.stroke();
+
+}
+
+function drawLeftLeg() {
+
+    let leftLeg = document.getElementById('hangman-area');
+
+    let ctx = leftLeg.getContext('2d');
+
+    ctx.moveTo(400, 325);
+
+    ctx.lineTo(340, 385);
+
+    ctx.stroke();
+
+}
+
+function drawRightLeg() {
+
+    let rightLeg = document.getElementById('hangman-area');
+
+    let ctx = rightLeg.getContext('2d');
+
+    ctx.moveTo(400, 325);
+
+    ctx.lineTo(460, 385);
+
+    ctx.stroke();
+
+}
+
+function playRound() {
+
+    let word = words[0];
+
+    drawLetterLines();
+
+    drawAlphabet();
+
+    switch (true) {
+
+        case document.getElementById('J').clicked : drawJ(); answer += 1;
+
+        break;
+
+        case document.getElementById('A').clicked : drawA(); answer += 2;
+
+        break;
+
+        case document.getElementById('V').clicked : drawV(); answer += 1;
+
+        break;
+
+        case document.getElementById('S').clicked : drawS(); answer += 1;
+
+        break;
+
+        case document.getElementById('C').clicked : drawC(); answer += 1
+
+        break;
+
+        case document.getElementById('R').clicked : drawR(); answer += 1
+
+        break;
+
+        case document.getElementById('I').clicked : drawI(); answer += 1;
+
+        break;
+
+        case document.getElementById('P').clicked : drawP(); answer += 1;
+
+        break;
+
+        case document.getElementById('T').clicked : drawT(); answer += 1;
+
+        break;
+
+        case document.getElementById('B').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('D').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('E').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('F').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('G').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('H').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('K').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('L').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('M').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('N').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('O').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('P').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('Q').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('U').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('W').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('X').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('Y').clicked : hangman += 1;
+
+        break;
+
+        case document.getElementById('Z').clicked : hangman += 1;
+
+    }
+          
 }

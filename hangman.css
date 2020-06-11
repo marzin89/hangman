@@ -9,7 +9,6 @@ h1 {
 canvas {
     position: relative;
     left: 35%;
-    border-style: solid;
 }
 
 #hangman-area {
