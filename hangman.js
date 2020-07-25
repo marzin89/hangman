@@ -8,51 +8,83 @@ function drawLetterLines() {
 
     const letter1 = document.createElement('span');
 
-    letter1.innerHTML = ' _____ ';
+    letter1.className = "letter-lines";
+
+    letter1.innerHTML = '______';
 
     word.appendChild(letter1);
 
     const letter2 = document.createElement('span');
 
-    letter2.innerHTML = ' _____ ';
+    letter2.innerHTML = '______';
+
+    letter2.className = "letter-lines";
 
     word.appendChild(letter2);
 
     const letter3 = document.createElement('span');
 
-    letter3.innerHTML = ' _____ ';
+    letter3.innerHTML = '______';
+
+    letter3.className = "letter-lines";
 
     word.appendChild(letter3);
 
     const letter4 = document.createElement('span');
 
-    letter4.innerHTML = ' _____ ';
+    letter4.innerHTML = '______';
+
+    letter4.className = "letter-lines";
 
     word.appendChild(letter4);
 
     const letter5 = document.createElement('span');
 
-    letter5.innerHTML = ' _____ ';
+    letter5.innerHTML = '______';
+
+    letter5.className = "letter-lines";
 
     word.appendChild(letter5);
 
     const letter6 = document.createElement('span');
 
-    letter6.innerHTML = ' _____ ';
+    letter6.innerHTML = '______';
+
+    letter6.className = "letter-lines";
 
     word.appendChild(letter6);
 
     const letter7 = document.createElement('span');
 
-    letter7.innerHTML = ' _____ ';
+    letter7.innerHTML = '______';
+
+    letter7.className = "letter-lines";
 
     word.appendChild(letter7);
 
     const letter8 = document.createElement('span');
 
-    letter8.innerHTML = ' _____ ';
+    letter8.innerHTML = '______';
+
+    letter8.className = "letter-lines";
 
     word.appendChild(letter8);
+
+    const letter9 = document.createElement('span');
+
+    letter9.innerHTML = '______';
+
+    letter9.className = "letter-lines";
+
+    word.appendChild(letter9);
+
+    const letter10 = document.createElement('span');
+
+    letter10.innerHTML = '______';
+
+    letter10.className = "letter-lines";
+
+    word.appendChild(letter10);
 
 }
 
