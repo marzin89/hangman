@@ -4,53 +4,55 @@ let word = words[0];
 
 function drawLetterLines() {
 
-    let word = document.getElementById('word-area');
+    const word = document.getElementById('word-area');
 
-    let ctx = word.getContext('2d');
+    const letter1 = document.createElement('span');
 
-    ctx.beginPath();
+    letter1.innerHTML = ' _____ ';
 
-    ctx.moveTo(25, 75);
+    word.appendChild(letter1);
 
-    ctx.lineTo(75, 75);
+    const letter2 = document.createElement('span');
 
-    ctx.moveTo(100, 75);
+    letter2.innerHTML = ' _____ ';
 
-    ctx.lineTo(150, 75);
+    word.appendChild(letter2);
 
-    ctx.moveTo(175, 75);
+    const letter3 = document.createElement('span');
 
-    ctx.lineTo(225, 75);
+    letter3.innerHTML = ' _____ ';
 
-    ctx.moveTo(250, 75);
+    word.appendChild(letter3);
 
-    ctx.lineTo(300, 75);
+    const letter4 = document.createElement('span');
 
-    ctx.moveTo(325, 75);
+    letter4.innerHTML = ' _____ ';
 
-    ctx.lineTo(375, 75);
+    word.appendChild(letter4);
 
-    ctx.moveTo(400, 75);
+    const letter5 = document.createElement('span');
 
-    ctx.lineTo(450, 75);
+    letter5.innerHTML = ' _____ ';
 
-    ctx.moveTo(475, 75);
+    word.appendChild(letter5);
 
-    ctx.lineTo(525, 75);
+    const letter6 = document.createElement('span');
 
-    ctx.moveTo(550, 75);
+    letter6.innerHTML = ' _____ ';
 
-    ctx.lineTo(600, 75);
+    word.appendChild(letter6);
 
-    ctx.moveTo(625, 75);
+    const letter7 = document.createElement('span');
 
-    ctx.lineTo(675, 75);
+    letter7.innerHTML = ' _____ ';
 
-    ctx.moveTo(700, 75);
+    word.appendChild(letter7);
 
-    ctx.lineTo(750, 75);
-        
-    ctx.stroke();
+    const letter8 = document.createElement('span');
+
+    letter8.innerHTML = ' _____ ';
+
+    word.appendChild(letter8);
 
 }
 
@@ -1001,113 +1003,240 @@ function playRound() {
 
     drawAlphabet();
 
-    switch (true) {
+    function drawHangMan() {
 
-        case document.getElementById('J').clicked : drawJ(); answer += 1;
 
-        break;
+        if ( hangman == 1 && answer < 10 ) {
+        
+            drawHill1();
+    
+        } else if ( hangman == 2 && answer < 10 ) {
+    
+            drawHill2();
+    
+        } else if ( hangman == 3 && answer < 10 ) {
+    
+            drawPole();
+    
+        } else if ( hangman == 4 && answer < 10 ) {
+    
+            drawDiagonalBeam();
+    
+        } else if ( hangman == 5 && answer < 10 ) {
+    
+            drawHorizontalBeam();
+    
+        } else if ( hangman == 6 && answer < 10 ) {
+    
+            drawRope();
+    
+        } else if ( hangman == 7 && answer < 10 ) {
+    
+            drawHead();
+    
+        } else if ( hangman == 8 && answer < 10 ) {
+    
+            drawTorso();
+    
+        } else if ( hangman == 9 && answer < 10 ) {
+    
+            drawLeftArm();
+    
+        } else if ( hangman == 10 && answer < 10 ) {
+    
+            drawRightArm();
+    
+        } else if ( hangman == 11 && answer < 10 ) {
+    
+            drawLeftLeg();
+    
+        } else if ( hangman == 12 && answer < 10 ) {
+    
+            drawRightLeg();
+    
+        }
+        
+    }
 
-        case document.getElementById('A').clicked : drawA(); answer += 2;
+    if ( document.getElementById('J').clicked == true ) {
 
-        break;
+        drawJ(); 
+        
+        answer += 1;
 
-        case document.getElementById('V').clicked : drawV(); answer += 1;
+        return answer;
 
-        break;
+    } else if ( document.getElementById('A').clicked == true ) { 
+        
+        drawA(); 
+        
+        answer += 2;
 
-        case document.getElementById('S').clicked : drawS(); answer += 1;
+        return answer;
 
-        break;
+    } else if ( document.getElementById('V').clicked == true ) {
+        
+        drawV(); 
+        
+        answer += 1;
 
-        case document.getElementById('C').clicked : drawC(); answer += 1
+        return answer;
 
-        break;
+    } else if ( document.getElementById('S').clicked == true ) { 
+        
+        drawS(); 
+        
+        answer += 1;
 
-        case document.getElementById('R').clicked : drawR(); answer += 1
+        return answer;
 
-        break;
+    } else if ( document.getElementById('C').clicked == true ) {
+        
+        drawC(); 
+        
+        answer += 1;
 
-        case document.getElementById('I').clicked : drawI(); answer += 1;
+        return answer;
 
-        break;
+    } else if ( document.getElementById('R').clicked == true ) {
+        
+        drawR(); 
+        
+        answer += 1;
 
-        case document.getElementById('P').clicked : drawP(); answer += 1;
+        return answer;
 
-        break;
+    } else if ( document.getElementById('I').clicked == true ) { 
+        
+        drawI(); 
+        
+        answer += 1;
 
-        case document.getElementById('T').clicked : drawT(); answer += 1;
+        return answer;
 
-        break;
+    } else if ( document.getElementById('P').clicked == true ) { 
+        
+        drawP(); 
+        
+        answer += 1;
 
-        case document.getElementById('B').clicked : hangman += 1;
+        return answer;
 
-        break;
+    } else if ( document.getElementById('T').clicked == true ) { 
+        
+        drawT(); 
+        
+        answer += 1;
 
-        case document.getElementById('D').clicked : hangman += 1;
+        return answer;
 
-        break;
+    } else if ( document.getElementById('B').clicked == true ) { 
+        
+        hangman += 1;
 
-        case document.getElementById('E').clicked : hangman += 1;
+        return hangman;
 
-        break;
+    } else if ( document.getElementById('D').clicked == true ) {
 
-        case document.getElementById('F').clicked : hangman += 1;
+        hangman += 1;
 
-        break;
+        return hangman;
 
-        case document.getElementById('G').clicked : hangman += 1;
+    } else if ( document.getElementById('E').clicked == true ) { 
+        
+        hangman += 1;
 
-        break;
+        return hangman;
 
-        case document.getElementById('H').clicked : hangman += 1;
+    } else if ( document.getElementById('F').clicked == true ) {
+        
+        hangman += 1;
 
-        break;
+        return hangman;
 
-        case document.getElementById('K').clicked : hangman += 1;
+    } else if ( document.getElementById('G').clicked == true ) {
 
-        break;
+        hangman += 1;
 
-        case document.getElementById('L').clicked : hangman += 1;
+        return hangman;
 
-        break;
+    } else if ( document.getElementById('H').clicked == true ) {
+        
+        hangman += 1;
 
-        case document.getElementById('M').clicked : hangman += 1;
+        return hangman;
 
-        break;
+    } else if ( document.getElementById('K').clicked == true ) {
+        
+        hangman += 1;
 
-        case document.getElementById('N').clicked : hangman += 1;
+        return hangman;
 
-        break;
+    } else if ( document.getElementById('L').clicked == true ) {
 
-        case document.getElementById('O').clicked : hangman += 1;
+        hangman += 1;
 
-        break;
+        return hangman;
 
-        case document.getElementById('P').clicked : hangman += 1;
+    } else if ( document.getElementById('M').clicked == true ) { 
+        
+        hangman += 1;
 
-        break;
+        return hangman;
 
-        case document.getElementById('Q').clicked : hangman += 1;
+    } else if ( document.getElementById('N').clicked == true ) {
+        
+        hangman += 1;
 
-        break;
+        return hangman;
 
-        case document.getElementById('U').clicked : hangman += 1;
+    } else if ( document.getElementById('O').clicked == true ) {
 
-        break;
+        hangman += 1;
 
-        case document.getElementById('W').clicked : hangman += 1;
+        return hangman;
 
-        break;
+    } else if ( document.getElementById('P').clicked == true ) { 
+        
+        hangman += 1;
 
-        case document.getElementById('X').clicked : hangman += 1;
+        return hangman;
 
-        break;
+    } else if ( document.getElementById('Q').clicked == true ) { 
+        
+        hangman += 1;
 
-        case document.getElementById('Y').clicked : hangman += 1;
+        return hangman;
 
-        break;
+    } else if ( document.getElementById('U').clicked == true ) {
 
-        case document.getElementById('Z').clicked : hangman += 1;
+        hangman += 1;
+
+        return hangman;
+
+    } else if ( document.getElementById('W').clicked == true ) {
+     
+        hangman += 1;
+
+        return hangman;
+
+    } else if ( document.getElementById('X').clicked == true ) { 
+        
+        hangman += 1;
+
+        return hangman;
+
+    } else if ( document.getElementById('Y').clicked == true ) { 
+        
+        hangman += 1;
+
+        return hangman;
+
+    } else if ( document.getElementById('Z').clicked == true ) {
+
+        hangman += 1;
+
+        return hangman;
 
     }
           
