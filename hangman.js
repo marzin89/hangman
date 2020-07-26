@@ -8,6 +8,8 @@ function drawLetterLines() {
 
     const letter1 = document.createElement('span');
 
+    letter1.id = "letter1";
+
     letter1.className = "letter-lines";
 
     letter1.innerHTML = '______';
@@ -18,6 +20,8 @@ function drawLetterLines() {
 
     letter2.innerHTML = '______';
 
+    letter2.id = "letter2";
+
     letter2.className = "letter-lines";
 
     word.appendChild(letter2);
@@ -25,6 +29,8 @@ function drawLetterLines() {
     const letter3 = document.createElement('span');
 
     letter3.innerHTML = '______';
+
+    letter3.id = "letter3";
 
     letter3.className = "letter-lines";
 
@@ -34,6 +40,8 @@ function drawLetterLines() {
 
     letter4.innerHTML = '______';
 
+    letter4.id = "letter4";
+
     letter4.className = "letter-lines";
 
     word.appendChild(letter4);
@@ -41,6 +49,8 @@ function drawLetterLines() {
     const letter5 = document.createElement('span');
 
     letter5.innerHTML = '______';
+
+    letter5.id = "letter5";
 
     letter5.className = "letter-lines";
 
@@ -50,6 +60,8 @@ function drawLetterLines() {
 
     letter6.innerHTML = '______';
 
+    letter6.id = "letter6";
+
     letter6.className = "letter-lines";
 
     word.appendChild(letter6);
@@ -57,6 +69,8 @@ function drawLetterLines() {
     const letter7 = document.createElement('span');
 
     letter7.innerHTML = '______';
+
+    letter7.id = "letter7";
 
     letter7.className = "letter-lines";
 
@@ -66,6 +80,8 @@ function drawLetterLines() {
 
     letter8.innerHTML = '______';
 
+    letter8.id = "letter8";
+
     letter8.className = "letter-lines";
 
     word.appendChild(letter8);
@@ -74,6 +90,8 @@ function drawLetterLines() {
 
     letter9.innerHTML = '______';
 
+    letter9.id = "letter9";
+
     letter9.className = "letter-lines";
 
     word.appendChild(letter9);
@@ -81,6 +99,8 @@ function drawLetterLines() {
     const letter10 = document.createElement('span');
 
     letter10.innerHTML = '______';
+
+    letter10.id = "letter10";
 
     letter10.className = "letter-lines";
 
@@ -133,7 +153,7 @@ function drawAlphabet() {
 
     a_to_m.appendChild(c);
 
-    c.onclick=drawC;
+    c.onclick = function() { letter1.innerHTML = 'J';}
 
     
     const d = document.createElement('button');
@@ -222,7 +242,7 @@ function drawAlphabet() {
 
     a_to_m.appendChild(j);
 
-    j.onclick=drawJ;
+    j.onclick = drawJ;
 
 
     const k = document.createElement('button');
@@ -431,432 +451,6 @@ function drawAlphabet() {
 
 }
 
-function drawA() {
-
-    let a = document.getElementById('word-area');
-
-    let ctx = a.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[0] ) {
-
-        ctx.fillText('A', 100, 60);
-
-        ctx.fillText('A', 250, 60);
-
-    } else if ( word == words[1] ) {
-
-        ctx.fillText('A', 250, 60);
-
-    }
-
-}
-
-function drawB() {
-
-    let b = document.getElementById('word-area');
-
-    let ctx = b.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[1] ) {
-
-        ctx.fillText('B', 400, 60);
-
-    }
-
-}
-
-function drawC() {
-
-    let c = document.getElementById('word-area');
-
-    let ctx = c.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[0] ) {
-
-        ctx.fillText('C', 400, 60);
-
-    }
-
-}
-
-function drawD() {
-
-    let d = document.getElementById('word-area');
-
-    let ctx = d.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[4] ) {
-
-        ctx.fillText('D', 400, 60);
-
-    }
-
-}
-
-function drawE() {
-
-    let e = document.getElementById('word-area');
-
-    let ctx = e.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[1] ) {
-
-        ctx.fillText('E', 475, 60);
-
-    } else if ( word == words[2] ) {
-
-        ctx.fillText('E', 100, 60);
-
-        ctx.fillText('E', 250, 60);
-
-    } else if ( word == words[3] ) {
-
-        ctx.fillText('E', 325, 60);
-
-    } else if ( word == words[4] ) {
-
-        ctx.fillText('E', 250, 60);
-
-    }
-
-}
-
-function drawF() {
-
-    let f = document.getElementById('word-area');
-
-    let ctx = f.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[4] ) {
-
-        ctx.fillText('F', 25, 60);
-
-    }
-
-}
-
-function drawH() {
-
-    let h = document.getElementById('word-area');
-
-    let ctx = h.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[4] ) {
-
-        ctx.fillText('H', 550, 60);
-
-    }
-
-}
-
-function drawI() {
-
-    let i = document.getElementById('word-area');
-
-    let ctx = i.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[0] ) {
-
-        ctx.fillText('I', 550, 60);
-
-    } else if ( word == words[2] ) {
-
-        ctx.fillText('I', 400, 60);
-
-        ctx.fillText('I', 550, 60);
-
-    } else if ( word == words[3] ) {
-
-        ctx.fillText('I', 175, 60);
-
-        ctx.fillText('I', 550, 60);
-
-    } else if ( word == words[4] ) {
-
-        ctx.fillText('I', 175, 60);
-
-        ctx.fillText('I', 625, 60);
-
-    }
-
-}
-
-function drawJ() {
-
-    let j = document.getElementById('word-area');
-
-    let ctx = j.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[0] ) {
-
-        ctx.fillText('J', 25, 60);
-
-    }
-
-}
-
-function drawL() {
-
-    let l = document.getElementById('word-area');
-
-    let ctx = l.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[2] ) {
-
-        ctx.fillText('L', 175, 60);
-
-    }
-
-}
-
-function drawN() {
-
-    let n = document.getElementById('word-area');
-
-    let ctx = n.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[2] ) {
-
-        ctx.fillText('N', 700, 60);
-
-    } else if ( word == words[3] ) {
-
-        ctx.fillText('N', 100, 60);
-
-    } else if ( word == words[4] ) {
-
-        ctx.fillText('N', 325, 60);
-
-    }
-
-}
-
-function drawO() {
-
-    let o = document.getElementById('word-area');
-
-    let ctx = o.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[2] ) {
-
-        ctx.fillText('O', 625, 60);
-
-    }
-
-}
-
-function drawP() {
-
-    let p = document.getElementById('word-area');
-
-    let ctx = p.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[0] ) {
-
-        ctx.fillText('P', 625, 60);
-
-    } else if ( word == words[4] ) {
-
-        ctx.fillText('P', 700, 60);
-
-    }
-
-}
-
-function drawR() {
-
-    let r = document.getElementById('word-area');
-
-    let ctx = r.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[0] ) {
-
-        ctx.fillText('R', 475, 60);
-
-    } else if ( word == words[1] ) {
-
-        ctx.fillText('R', 175, 60);
-
-        ctx.fillText('R', 550, 60);
-
-        ctx.fillText('R', 625, 60);
-
-    } else if ( word == words[3] ) {
-
-        ctx.fillText('R', 400, 60);
-
-    } else if ( word == words[4] ) {
-
-        ctx.fillText('R', 100, 60);
-
-    }
-
-}
-
-function drawS() {
-
-    let s = document.getElementById('word-area');
-
-    let ctx = s.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[0] ) {
-
-        ctx.fillText('S', 325, 60);
-
-    } else if ( word == words[1] ) {
-
-        ctx.fillText('S', 25, 60);
-
-    } else if ( word == words[2] ) {
-
-        ctx.fillText('S', 475, 60);
-
-    } else if ( word == words[3] ) {
-
-        ctx.fillText('S', 475, 60);
-
-    } else if ( word == words[4] ) {
-
-        ctx.fillText('S', 475, 60);
-
-    }
-
-}
-
-function drawT() {
-
-    let t = document.getElementById('word-area');
-
-    let ctx = t.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[0] ) {
-
-        ctx.fillText('T', 700, 60);
-
-    } else if ( word == words[1] ) {
-
-        ctx.fillText('T', 100, 60);
-
-    } else if ( word == words[2] ) {
-
-        ctx.fillText('T', 25, 60);
-
-    } else if ( word == words[3] ) {
-
-        ctx.fillText('T', 625, 60);
-
-    }
-
-}
-
-function drawU() {
-
-    let u = document.getElementById('word-area');
-
-    let ctx = u.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[3] ) {
-
-        ctx.fillText('U', 25, 60);
-
-    }
-
-}
-
-function drawV() {
-
-    let v = document.getElementById('word-area');
-
-    let ctx = v.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[0] ) {
-
-        ctx.fillText('V', 175, 60);
-
-    } else if ( word == words[2] ) {
-
-        ctx.fillText('V', 325, 60);
-
-    } else if ( word == words[3] ) {
-
-        ctx.fillText('V', 250, 60);
-
-    }
-
-}
-
-function drawW() {
-
-    let w = document.getElementById('word-area');
-
-    let ctx = w.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[1] ) {
-
-        ctx.fillText('W', 325, 60);
-
-    }
-
-}
-
-function drawY() {
-
-    let y = document.getElementById('word-area');
-
-    let ctx = y.getContext('2d');
-
-    ctx.font = '50px Arial';
-
-    if ( word == words[3] ) {
-
-        ctx.fillText('Y', 700, 60);
-
-    } else if ( word == words[1] ) {
-
-        ctx.fillText('Y', 700, 60);
-
-    }
-
-}
-
 let answer = 0;
 
 let hangman = 0;
@@ -1031,10 +625,6 @@ function playRound() {
 
     let word = words[0];
 
-    drawLetterLines();
-
-    drawAlphabet();
-
     function drawHangMan() {
 
 
@@ -1085,9 +675,7 @@ function playRound() {
         } else if ( hangman == 12 && answer < 10 ) {
     
             drawRightLeg();
-    
-        }
-        
+        }   
     }
 
     if ( document.getElementById('J').clicked == true ) {
