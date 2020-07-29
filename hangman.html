@@ -7,12 +7,41 @@
 <body>
     <h1>HANGMAN</h1>
     <div>
-        <canvas id="hangman-area" width="500" height="500"></canvas>
+        <canvas id = "hangman-area" width="500" height="500"></canvas>
     </div>
-    <div id="word-area"></div>
-    <div>
-        <button id="Play" name="Play" value="Play" onclick="drawLetterLines();drawAlphabet();">Play!</button>
+    <div id = "word-area">
+    <span id="letter-lines">— — — — — — — — — —</span>
+    <div id="A-M">
+        <button id="A" class="alphabet" onclick="playRound();">A</button>
+        <button id="B" class="alphabet" onclick="playRound();">B</button>
+        <button id="C" class="alphabet" onclick="playRound();">C</button>
+        <button id="D" class="alphabet" onclick="playRound();">D</button>
+        <button id="E" class="alphabet" onclick="playRound();">E</button>
+        <button id="F" class="alphabet" onclick="playRound();">F</button>
+        <button id="G" class="alphabet" onclick="playRound();">G</button>
+        <button id="H" class="alphabet" onclick="playRound();">H</button>
+        <button id="I" class="alphabet" onclick="playRound();">I</button>
+        <button id="J" class="alphabet" onclick="playRound();">J</button>
+        <button id="K" class="alphabet" onclick="playRound();">K</button>
+        <button id="L" class="alphabet" onclick="playRound();">L</button>
+        <button id="M" class="alphabet" onclick="playRound();">M</button>
+    </div>
+    <div id="N-Z">
+        <button id="N" class="alphabet" onclick="playRound();">N</button>
+        <button id="O" class="alphabet" onclick="playRound();">O</button>
+        <button id="P" class="alphabet" onclick="playRound();">P</button>
+        <button id="Q" class="alphabet" onclick="playRound();">Q</button>
+        <button id="R" class="alphabet" onclick="playRound();">R</button>
+        <button id="S" class="alphabet" onclick="playRound();">S</button>
+        <button id="T" class="alphabet" onclick="playRound();">T</button>
+        <button id="U" class="alphabet" onclick="playRound();">U</button>
+        <button id="V" class="alphabet" onclick="playRound();">V</button>
+        <button id="W" class="alphabet" onclick="playRound();">W</button>
+        <button id="X" class="alphabet" onclick="playRound();">X</button>
+        <button id="Y" class="alphabet" onclick="playRound();">Y</button>
+        <button id="Z" class="alphabet" onclick="playRound();">Z</button>
     </div> 
+    </div>
     <script type="text/javascript" src="hangman.js"></script>
 </body>
 </html>

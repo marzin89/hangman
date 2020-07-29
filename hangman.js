@@ -2,454 +2,7 @@ let words = ['javascript', 'strawberry', 'television', 'university', 'friendship
 
 let word = words[0];
 
-function drawLetterLines() {
-
-    const word = document.getElementById('word-area');
-
-    const letter1 = document.createElement('span');
-
-    letter1.id = "letter1";
-
-    letter1.className = "letter-lines";
-
-    letter1.innerHTML = '______';
-
-    word.appendChild(letter1);
-
-    const letter2 = document.createElement('span');
-
-    letter2.innerHTML = '______';
-
-    letter2.id = "letter2";
-
-    letter2.className = "letter-lines";
-
-    word.appendChild(letter2);
-
-    const letter3 = document.createElement('span');
-
-    letter3.innerHTML = '______';
-
-    letter3.id = "letter3";
-
-    letter3.className = "letter-lines";
-
-    word.appendChild(letter3);
-
-    const letter4 = document.createElement('span');
-
-    letter4.innerHTML = '______';
-
-    letter4.id = "letter4";
-
-    letter4.className = "letter-lines";
-
-    word.appendChild(letter4);
-
-    const letter5 = document.createElement('span');
-
-    letter5.innerHTML = '______';
-
-    letter5.id = "letter5";
-
-    letter5.className = "letter-lines";
-
-    word.appendChild(letter5);
-
-    const letter6 = document.createElement('span');
-
-    letter6.innerHTML = '______';
-
-    letter6.id = "letter6";
-
-    letter6.className = "letter-lines";
-
-    word.appendChild(letter6);
-
-    const letter7 = document.createElement('span');
-
-    letter7.innerHTML = '______';
-
-    letter7.id = "letter7";
-
-    letter7.className = "letter-lines";
-
-    word.appendChild(letter7);
-
-    const letter8 = document.createElement('span');
-
-    letter8.innerHTML = '______';
-
-    letter8.id = "letter8";
-
-    letter8.className = "letter-lines";
-
-    word.appendChild(letter8);
-
-    const letter9 = document.createElement('span');
-
-    letter9.innerHTML = '______';
-
-    letter9.id = "letter9";
-
-    letter9.className = "letter-lines";
-
-    word.appendChild(letter9);
-
-    const letter10 = document.createElement('span');
-
-    letter10.innerHTML = '______';
-
-    letter10.id = "letter10";
-
-    letter10.className = "letter-lines";
-
-    word.appendChild(letter10);
-
-}
-
-function drawAlphabet() {
-
-    const a_to_m = document.createElement('div');
-
-    a_to_m.id='A-M';
-
-    document.body.appendChild(a_to_m);
-
-    
-    const a = document.createElement('button');
-
-    a.innerText='A';
-
-    a.className='alphabet';
-
-    a.id='A';
-
-    a_to_m.appendChild(a);
-
-    a.onclick=drawA;
-
-    
-    const b = document.createElement('button');
-
-    b.innerText='B';
-
-    b.className='alphabet';
-
-    b.id='B';
-
-    a_to_m.appendChild(b);
-
-    b.onclick=drawB;
-
-
-    const c = document.createElement('button');
-
-    c.innerText='C';
-
-    c.className='alphabet';
-
-    c.id='C';
-
-    a_to_m.appendChild(c);
-
-    c.onclick = function() { letter1.innerHTML = 'J';}
-
-    
-    const d = document.createElement('button');
-
-    d.innerText='D';
-
-    d.className='alphabet';
-
-    d.id='D';
-
-    a_to_m.appendChild(d);
-
-    d.onclick=drawD;
-
-
-    const e = document.createElement('button');
-
-    e.innerText='E';
-
-    e.className='alphabet';
-
-    e.id='E';
-
-    a_to_m.appendChild(e);
-    
-    e.onclick=drawE;
-
-
-    const f = document.createElement('button');
-
-    f.innerText='F';
-
-    f.className='alphabet';
-
-    f.id='F';
-
-    a_to_m.appendChild(f);
-
-    f.onclick=drawF;
-
-    
-    const g = document.createElement('button');
-
-    g.innerText='G';
-
-    g.className='alphabet';
-
-    g.id='G';
-
-    a_to_m.appendChild(g);
-
-
-    const h = document.createElement('button');
-
-    h.innerText='H';
-
-    h.className='alphabet';
-
-    h.id='H';
-
-    a_to_m.appendChild(h);
-
-    h.onclick=drawH;
-
-
-    const i = document.createElement('button');
-
-    i.innerText='I';
-
-    i.className='alphabet';
-
-    i.id='I';
-
-    a_to_m.appendChild(i);
-
-    i.onclick=drawI;
-
-
-    const j = document.createElement('button');
-
-    j.innerText='J';
-
-    j.className='alphabet';
-
-    j.id='J';
-
-    a_to_m.appendChild(j);
-
-    j.onclick = drawJ;
-
-
-    const k = document.createElement('button');
-
-    k.innerText='K';
-
-    k.id='K';
-
-    k.className='alphabet';
-
-    a_to_m.appendChild(k);
-
-
-    const l = document.createElement('button');
-
-    l.innerText='L';
-
-    l.className='alphabet';
-
-    l.id='L';
-
-    a_to_m.appendChild(l);
-
-    l.onclick=drawL;
-
-
-    const m = document.createElement('button');
-
-    m.innerText='M';
-
-    m.className='alphabet';
-
-    m.id='M';
-
-    a_to_m.appendChild(m);
-
-    
-    const n_to_z = document.createElement('div');
-
-    n_to_z.id='N-Z';
-
-    document.body.appendChild(n_to_z);
-
-
-    const n = document.createElement('button');
-
-    n.innerText='N';
-
-    n.className='alphabet';
-
-    n.id='N';
-
-    n_to_z.appendChild(n);
-
-    n.onclick=drawN;
-
-    
-    const o = document.createElement('button');
-
-    o.innerText='O';
-
-    o.className='alphabet';
-
-    o.id='O';
-
-    n_to_z.appendChild(o);
-
-    o.onclick=drawO;
-
-
-    const p = document.createElement('button');
-
-    p.innerText='P';
-
-    p.className='alphabet';
-
-    p.id='P';
-
-    n_to_z.appendChild(p);
-
-    p.onclick=drawP;
-
-
-    const q = document.createElement('button');
-
-    q.innerText='Q';
-
-    q.className='alphabet';
-
-    q.id='Q';
-
-    n_to_z.appendChild(q);
-
-
-    const r = document.createElement('button');
-
-    r.innerText='R';
-
-    r.className='alphabet';
-
-    r.id='R';
-
-    n_to_z.appendChild(r);
-
-    r.onclick=drawR;
-
-
-    const s = document.createElement('button');
-
-    s.innerText='S';
-
-    s.className='alphabet';
-
-    s.id='S';
-
-    n_to_z.appendChild(s);
-
-    s.onclick=drawS;
-
-
-    const t = document.createElement('button');
-
-    t.innerText='T';
-
-    t.className='alphabet';
-
-    t.id='T';
-
-    n_to_z.appendChild(t);
-
-    t.onclick=drawT;
-
-
-    const u = document.createElement('button');
-
-    u.innerText='U';
-
-    u.className='alphabet';
-
-    u.id='U';
-
-    n_to_z.appendChild(u);
-
-    u.onclick=drawU;
-
-
-    const v = document.createElement('button');
-
-    v.innerText='V';
-
-    v.className='alphabet';
-
-    v.id='V';
-
-    n_to_z.appendChild(v);
-
-    v.onclick=drawV;
-
-
-    const w = document.createElement('button');
-
-    w.innerText='W';
-
-    w.className='alphabet';
-
-    w.id='W';
-
-    n_to_z.appendChild(w);
-
-    w.onclick=drawW;
-
-
-    const x = document.createElement('button');
-
-    x.innerText='X';
-
-    x.className='alphabet';
-
-    x.id='X';
-
-    n_to_z.appendChild(x);
-
-
-    const y = document.createElement('button');
-
-    y.innerText='Y';
-
-    y.className='alphabet';
-
-    y.id='Y';
-
-    n_to_z.appendChild(y);
-
-    y.onclick=drawY;
-
-
-    const z = document.createElement('button');
-
-    z.innerText='Z';
-
-    z.className='alphabet';
-
-    z.id='Z';
-
-    n_to_z.appendChild(z);
-
-}
+let letterLines = document.getElementById('letter-lines');
 
 let answer = 0;
 
@@ -625,239 +178,274 @@ function playRound() {
 
     let word = words[0];
 
-    function drawHangMan() {
+    if (document.getElementById('J').clicked) {
 
-
-        if ( hangman == 1 && answer < 10 ) {
-        
-            drawHill1();
-    
-        } else if ( hangman == 2 && answer < 10 ) {
-    
-            drawHill2();
-    
-        } else if ( hangman == 3 && answer < 10 ) {
-    
-            drawPole();
-    
-        } else if ( hangman == 4 && answer < 10 ) {
-    
-            drawDiagonalBeam();
-    
-        } else if ( hangman == 5 && answer < 10 ) {
-    
-            drawHorizontalBeam();
-    
-        } else if ( hangman == 6 && answer < 10 ) {
-    
-            drawRope();
-    
-        } else if ( hangman == 7 && answer < 10 ) {
-    
-            drawHead();
-    
-        } else if ( hangman == 8 && answer < 10 ) {
-    
-            drawTorso();
-    
-        } else if ( hangman == 9 && answer < 10 ) {
-    
-            drawLeftArm();
-    
-        } else if ( hangman == 10 && answer < 10 ) {
-    
-            drawRightArm();
-    
-        } else if ( hangman == 11 && answer < 10 ) {
-    
-            drawLeftLeg();
-    
-        } else if ( hangman == 12 && answer < 10 ) {
-    
-            drawRightLeg();
-        }   
-    }
-
-    if ( document.getElementById('J').clicked == true ) {
-
-        drawJ(); 
+        document.getElementById('letter1').innerHTML = 'J'; 
         
         answer += 1;
 
         return answer;
 
-    } else if ( document.getElementById('A').clicked == true ) { 
+    } else if (document.getElementById('A').clicked) { 
         
-        drawA(); 
+        document.getElementById('letter2').innerHTML = 'A'; 
+
+        document.getElementById('letter4').innerHTML = 'A';
         
         answer += 2;
 
         return answer;
 
-    } else if ( document.getElementById('V').clicked == true ) {
+    } else if (document.getElementById('V').clicked) {
         
-        drawV(); 
-        
-        answer += 1;
-
-        return answer;
-
-    } else if ( document.getElementById('S').clicked == true ) { 
-        
-        drawS(); 
+        document.getElementById('letter3').innerHTML = 'V'; 
         
         answer += 1;
 
         return answer;
 
-    } else if ( document.getElementById('C').clicked == true ) {
+    } else if (document.getElementById('S').clicked) { 
         
-        drawC(); 
-        
-        answer += 1;
-
-        return answer;
-
-    } else if ( document.getElementById('R').clicked == true ) {
-        
-        drawR(); 
+        document.getElementById('letter5').innerHTML = 'S'; 
         
         answer += 1;
 
         return answer;
 
-    } else if ( document.getElementById('I').clicked == true ) { 
+    } else if (document.getElementById('C').clicked) {
         
-        drawI(); 
-        
-        answer += 1;
-
-        return answer;
-
-    } else if ( document.getElementById('P').clicked == true ) { 
-        
-        drawP(); 
+        document.getElementById('letter6').innerHTML = 'C'; 
         
         answer += 1;
 
         return answer;
 
-    } else if ( document.getElementById('T').clicked == true ) { 
+    } else if (document.getElementById('R').clicked) {
         
-        drawT(); 
+        document.getElementById('letter7').innerHTML = 'R'; 
         
         answer += 1;
 
         return answer;
 
-    } else if ( document.getElementById('B').clicked == true ) { 
+    } else if (document.getElementById('I').clicked) { 
+        
+        document.getElementById('letter8').innerHTML = 'I'; 
+        
+        answer += 1;
+
+        return answer;
+
+    } else if (document.getElementById('P').clicked) { 
+        
+        document.getElementById('letter9').innerHTML = 'P';
+        
+        answer += 1;
+
+        return answer;
+
+    } else if (document.getElementById('T').clicked) { 
+        
+        document.getElementById('letter10').innerHTML = 'T'; 
+        
+        answer += 1;
+
+        return answer;
+
+    } else if (document.getElementById('B').clicked) { 
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('D').clicked == true ) {
+    } else if (document.getElementById('D').clicked) {
 
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('E').clicked == true ) { 
+    } else if (document.getElementById('E').clicked) { 
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('F').clicked == true ) {
+    } else if (document.getElementById('F').clicked) {
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('G').clicked == true ) {
+    } else if (document.getElementById('G').clicked) {
 
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('H').clicked == true ) {
+    } else if (document.getElementById('H').clicked) {
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('K').clicked == true ) {
+    } else if (document.getElementById('K').clicked) {
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('L').clicked == true ) {
+    } else if (document.getElementById('L').clicked) {
 
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('M').clicked == true ) { 
+    } else if (document.getElementById('M').clicked) { 
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('N').clicked == true ) {
+    } else if (document.getElementById('N').clicked) {
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('O').clicked == true ) {
+    } else if (document.getElementById('O').clicked) {
 
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('P').clicked == true ) { 
+    } else if (document.getElementById('P').clicked) { 
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('Q').clicked == true ) { 
+    } else if (document.getElementById('Q').clicked) { 
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('U').clicked == true ) {
+    } else if (document.getElementById('U').clicked) {
 
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('W').clicked == true ) {
+    } else if (document.getElementById('W').clicked) {
      
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('X').clicked == true ) { 
+    } else if (document.getElementById('X').clicked) { 
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('Y').clicked == true ) { 
+    } else if (document.getElementById('Y').clicked) { 
         
         hangman += 1;
 
+        drawHangMan();
+
         return hangman;
 
-    } else if ( document.getElementById('Z').clicked == true ) {
+    } else if (document.getElementById('Z').clicked) {
 
         hangman += 1;
 
-        return hangman;
+        drawHangMan();
 
+        return hangman;
     }
-          
+}         
+
+function drawHangMan() {
+
+    if (hangman == 1 && answer < 10) {
+    
+        drawHill1();
+
+    } else if (hangman == 2 && answer < 10) {
+
+        drawHill2();
+
+    } else if (hangman == 3 && answer < 10) {
+
+        drawPole();
+
+    } else if (hangman == 4 && answer < 10) {
+
+        drawDiagonalBeam();
+
+    } else if (hangman == 5 && answer < 10) {
+
+        drawHorizontalBeam();
+
+    } else if (hangman == 6 && answer < 10) {
+
+        drawRope();
+
+    } else if (hangman == 7 && answer < 10) {
+
+        drawHead();
+
+    } else if (hangman == 8 && answer < 10) {
+
+        drawTorso();
+
+    } else if (hangman == 9 && answer < 10) {
+
+        drawLeftArm();
+
+    } else if (hangman == 10 && answer < 10) {
+
+        drawRightArm();
+
+    } else if (hangman == 11 && answer < 10) {
+
+        drawLeftLeg();
+
+    } else if (hangman == 12 && answer < 10) {
+
+        drawRightLeg();
+    }   
 }
