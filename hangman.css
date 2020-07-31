@@ -29,22 +29,28 @@ h1 {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-#A-M, #N-Z {
-    margin-top: 10px;
-}
-
-.alphabet {
+#submit {
     font-size: medium;
     padding-top: 5px;
     padding-bottom: 5px;
-}
-#play {
-    font-size: large;
-    padding-top: 7.5px;
-    padding-bottom: 7.5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-top: 10px;
-    margin-left: 275px;
+}
+input {
+    font-size: medium;
+    width: 100px;
+    height: 35px;
+}
+h3, p {
+    position: absolute;
+    right: 30%;
+    font-size: medium;
+}
+h3 {
+    margin-top: -500px;
+}
+p {
+    margin-top: -450px;
 }
 
