@@ -38,4 +38,13 @@ h1 {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+#play {
+    font-size: large;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-left: 275px;
+}
 

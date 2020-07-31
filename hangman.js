@@ -4,6 +4,10 @@ let word = words[0];
 
 let letterLines = document.getElementById('letter-lines');
 
+let guess = ['—', '—', '—', '—', '—', '—', '—', '—', '—', '—'];
+
+letterLines.innerHTML = guess.join(' ');
+
 let answer = 0;
 
 let hangman = 0;
@@ -180,7 +184,9 @@ function playRound() {
 
     if (document.getElementById('J').clicked) {
 
-        document.getElementById('letter1').innerHTML = 'J'; 
+        guess[0] = 'J';
+        
+        letterLines.innerHTML = guess.join(' ');
         
         answer += 1;
 
