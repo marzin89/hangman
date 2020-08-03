@@ -8,7 +8,13 @@ let guess = ['—', '—', '—', '—', '—', '—', '—', '—', '—', '—
 
 letterLines.innerHTML = guess.join(' ');
 
-let answer = 0;
+let lettersUsed = document.querySelector('p');
+
+let alphabet = new RegExp(/[A-Za-z]/);
+
+const input = document.querySelector('input');
+
+const submit = document.getElementById('submit').addEventListener('click', playRound);
 
 let hangman = 0;
 
@@ -180,277 +186,157 @@ function drawRightLeg() {
 
 function playRound() {
 
-    let word = words[0];
-
-    if (document.getElementById('J').clicked) {
+    if (input.value == 'J'.toLowerCase()) {
 
         guess[0] = 'J';
         
         letterLines.innerHTML = guess.join(' ');
+
+        lettersUsed.innerHTML += 'J';
+
+    } else if (input.value == 'A'.toLowerCase()) { 
         
-        answer += 1;
+        guess[1] = 'A'; 
 
-        return answer;
+        guess[3] = 'A';
 
-    } else if (document.getElementById('A').clicked) { 
+        letterLines.innerHTML = guess.join(' ');
+
+        lettersUsed.innerHTML += 'A';
+
+    } else if (input.value == 'V'.toLowerCase()) {
+
+        guess[2] = 'V';
         
-        document.getElementById('letter2').innerHTML = 'A'; 
+        letterLines.innerHTML = guess.join(' '); 
 
-        document.getElementById('letter4').innerHTML = 'A';
+        lettersUsed.innerHTML += 'V';
+
+    } else if (input.value == 'S'.toLowerCase()) {
         
-        answer += 2;
-
-        return answer;
-
-    } else if (document.getElementById('V').clicked) {
+        guess[4] = 'S';
         
-        document.getElementById('letter3').innerHTML = 'V'; 
+        letterLines.innerHTML = guess.join(' ');
+
+        lettersUsed.innerHTML += 'S';
+
+    } else if (input.value == 'C'.toLowerCase()) {
+
+        guess[5] = 'C';
         
-        answer += 1;
+        letterLines.innerHTML = guess.join(' ');
 
-        return answer;
+        lettersUsed.innerHTML += 'C';
 
-    } else if (document.getElementById('S').clicked) { 
+    } else if (input.value == 'R'.toLowerCase()) {
+
+        guess[6] = 'R';
         
-        document.getElementById('letter5').innerHTML = 'S'; 
+        letterLines.innerHTML = guess.join(' ');
+
+        lettersUsed.innerHTML += 'R';
+
+    } else if (input.value == 'I'.toLowerCase()) {
+
+        guess[7] = 'I';
         
-        answer += 1;
-
-        return answer;
-
-    } else if (document.getElementById('C').clicked) {
+        letterLines.innerHTML = guess.join(' ');
         
-        document.getElementById('letter6').innerHTML = 'C'; 
+        lettersUsed.innerHTML += 'I';
+
+    } else if (input.value == 'P'.toLowerCase()) { 
+
+        guess[8] = 'P';
         
-        answer += 1;
+        letterLines.innerHTML = guess.join(' ');
 
-        return answer;
+        lettersUsed.innerHTML += 'P';
 
-    } else if (document.getElementById('R').clicked) {
-        
-        document.getElementById('letter7').innerHTML = 'R'; 
-        
-        answer += 1;
+    } else if (input.value == 'T'.toLowerCase()) {
+    
+        guess[9] = 'T';
 
-        return answer;
+        letterLines.innerHTML = guess.join(' ');
 
-    } else if (document.getElementById('I').clicked) { 
-        
-        document.getElementById('letter8').innerHTML = 'I'; 
-        
-        answer += 1;
+        lettersUsed.innerHTML += 'T';
 
-        return answer;
+    } else if (input.value == 'B'.toLowerCase() || input.value == 
+    
+    'D'.toLowerCase() || input.value == 'E'.toLowerCase() || input.value ==
 
-    } else if (document.getElementById('P').clicked) { 
-        
-        document.getElementById('letter9').innerHTML = 'P';
-        
-        answer += 1;
+    'F'.toLowerCase() || input.value == 'G'.toLowerCase() || input.value ==
 
-        return answer;
+    'H'.toLowerCase() || input.value == 'K'.toLowerCase() || input.value ==
 
-    } else if (document.getElementById('T').clicked) { 
-        
-        document.getElementById('letter10').innerHTML = 'T'; 
-        
-        answer += 1;
-
-        return answer;
-
-    } else if (document.getElementById('B').clicked) { 
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('D').clicked) {
-
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('E').clicked) { 
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('F').clicked) {
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('G').clicked) {
+    'L'.toLowerCase() || input.value == 'M'.toLowerCase() || input.value ==
+    
+    'N'.toLowerCase() || input.value == 'O'.toLowerCase() || input.value ==
+    
+    'Q'.toLowerCase() || input.value == 'U'.toLowerCase() || input.value ==
+    
+    'W'.toLowerCase() || input.value == 'X'.toLowerCase() || input.value ==
+    
+    'Y'.toLowerCase() || input.value == 'Z'.toLowerCase()) {
 
         hangman += 1;
 
         drawHangMan();
 
-        return hangman;
+        lettersUsed.innerHTML += input.value.toUpperCase();
+    
+    } else if (alphabet.test(input.value) == false) {
 
-    } else if (document.getElementById('H').clicked) {
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('K').clicked) {
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('L').clicked) {
-
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('M').clicked) { 
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('N').clicked) {
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('O').clicked) {
-
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('P').clicked) { 
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('Q').clicked) { 
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('U').clicked) {
-
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('W').clicked) {
-     
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('X').clicked) { 
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('Y').clicked) { 
-        
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
-
-    } else if (document.getElementById('Z').clicked) {
-
-        hangman += 1;
-
-        drawHangMan();
-
-        return hangman;
+        alert('Please enter a letter (A-Z)!');
     }
-}         
+}
 
 function drawHangMan() {
 
-    if (hangman == 1 && answer < 10) {
+    if (hangman == 1 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
     
         drawHill1();
 
-    } else if (hangman == 2 && answer < 10) {
+    } else if (hangman == 2 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawHill2();
 
-    } else if (hangman == 3 && answer < 10) {
+    } else if (hangman == 3 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawPole();
 
-    } else if (hangman == 4 && answer < 10) {
+    } else if (hangman == 4 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawDiagonalBeam();
 
-    } else if (hangman == 5 && answer < 10) {
+    } else if (hangman == 5 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawHorizontalBeam();
 
-    } else if (hangman == 6 && answer < 10) {
+    } else if (hangman == 6 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawRope();
 
-    } else if (hangman == 7 && answer < 10) {
+    } else if (hangman == 7 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawHead();
 
-    } else if (hangman == 8 && answer < 10) {
+    } else if (hangman == 8 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawTorso();
 
-    } else if (hangman == 9 && answer < 10) {
+    } else if (hangman == 9 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawLeftArm();
 
-    } else if (hangman == 10 && answer < 10) {
+    } else if (hangman == 10 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawRightArm();
 
-    } else if (hangman == 11 && answer < 10) {
+    } else if (hangman == 11 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawLeftLeg();
 
-    } else if (hangman == 12 && answer < 10) {
+    } else if (hangman == 12 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
 
         drawRightLeg();
     }   
