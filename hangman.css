@@ -19,23 +19,16 @@ h1 {
     letter-spacing: 10px;
     font-size: x-large;
 }
-#Play {
-    position: relative;
-    left: 35%;
-    font-size: large;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-#submit {
+#submit, #play-again {
     font-size: medium;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 10px;
+}
+#play-again {
+    margin-left: 110px;
 }
 input {
     font-size: medium;

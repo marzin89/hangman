@@ -16,6 +16,14 @@ const input = document.querySelector('input');
 
 const submit = document.getElementById('submit').addEventListener('click', roundOne);
 
+const div = document.getElementById('input-buttons');
+
+const playAgain = document.createElement('button');
+
+playAgain.innerHTML = 'Play again';
+
+playAgain.id = 'play-again';
+
 let hangman = 0;
 
 function drawHill1() {
@@ -293,9 +301,13 @@ function roundOne() {
 
         alert('You win!');
 
+        div.appendChild(playAgain);
+
     } else if (hangman == 12) {
 
         alert('You lose!');
+
+        div.appendChild(playAgain);
     }
 }
 
