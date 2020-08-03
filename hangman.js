@@ -14,7 +14,7 @@ let alphabet = new RegExp(/[A-Za-z]/);
 
 const input = document.querySelector('input');
 
-const submit = document.getElementById('submit').addEventListener('click', playRound);
+const submit = document.getElementById('submit').addEventListener('click', roundOne);
 
 let hangman = 0;
 
@@ -184,7 +184,7 @@ function drawRightLeg() {
 
 }
 
-function playRound() {
+function roundOne() {
 
     if (input.value == 'J'.toLowerCase()) {
 
@@ -288,55 +288,64 @@ function playRound() {
 
         alert('Please enter a letter (A-Z)!');
     }
+
+    if (letterLines.innerHTML == 'J A V A S C R I P T') {
+
+        alert('You win!');
+
+    } else if (hangman == 12) {
+
+        alert('You lose!');
+    }
 }
 
 function drawHangMan() {
 
-    if (hangman == 1 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    if (hangman == 1) {
     
         drawHill1();
 
-    } else if (hangman == 2 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 2) {
 
         drawHill2();
 
-    } else if (hangman == 3 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 3) {
 
         drawPole();
 
-    } else if (hangman == 4 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 4) {
 
         drawDiagonalBeam();
 
-    } else if (hangman == 5 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 5) {
 
         drawHorizontalBeam();
 
-    } else if (hangman == 6 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 6) {
 
         drawRope();
 
-    } else if (hangman == 7 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 7) {
 
         drawHead();
 
-    } else if (hangman == 8 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 8) {
 
         drawTorso();
 
-    } else if (hangman == 9 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 9) {
 
         drawLeftArm();
 
-    } else if (hangman == 10 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 10) {
 
         drawRightArm();
 
-    } else if (hangman == 11 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 11) {
 
         drawLeftLeg();
 
-    } else if (hangman == 12 && guess !== ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T']) {
+    } else if (hangman == 12) {
 
         drawRightLeg();
     }   
